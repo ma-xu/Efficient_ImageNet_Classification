@@ -1,6 +1,6 @@
 # Efficient ImageNet Classification
 
-:rocket: Training ImageNet in 8 hours.
+:rocket: Training Resnet50 on ImageNet in 8 hours.
 
 This repo provides an efficient implementation of ImageNet classification, based on PyTorch, DALI, and Apex.
 
