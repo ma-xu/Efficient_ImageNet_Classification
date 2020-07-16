@@ -46,7 +46,7 @@ model_names = sorted(name for name in models.__dict__
                      and callable(models.__dict__[name]))
 
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
-parser.add_argument('-d', '--data', default='/home/g1007540910/DATA/ImageNet2012/', type=str)
+parser.add_argument('-d', '--data', default='/PATH_to_imageNet/ImageNet2012/', type=str)
 parser.add_argument('--arch', '-a', metavar='ARCH', default='resnet18',
                     choices=model_names,
                     help='model architecture: ' +

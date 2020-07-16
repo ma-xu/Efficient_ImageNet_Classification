@@ -66,6 +66,13 @@ We provide two training strategies: step_lr schedular and cosine_lr schedular in
 The training models (last one and best one) and the log file  are saved in "checkpoints/imagenet/`model_name`" by default.
 ***
 
+I personally suggest to manually setup the path to imagenet dataset in [main_step.py (line 49)](https://github.com/13952522076/Efficient_ImageNet_Classification/blob/f6218ccc0992458909460c095795d9aca3e48c18/main_step.py#L49) 
+and [main_cosine.py (line 50)](https://github.com/13952522076/Efficient_ImageNet_Classification/blob/f6218ccc0992458909460c095795d9aca3e48c18/main_cosine.py#L50).
+Replace the default value to your real PATH.
+
+Or you can add a parameter `--data` in the following training command.
+
+
 **For the step learning rate schedular, run follwing commands**
 ```Bash
 # change the parameters accordingly if necessary
@@ -84,4 +91,6 @@ Please follow the same coding style in [models/resnet.py](https://github.com/139
 2. Import the model file in model package, say [models/__init__.py](https://github.com/13952522076/Efficient_ImageNet_Classification/blob/master/models/__init__.py)
 
 ## Acknowledgements
+This implementation is built upon [ImageNet demo](https://github.com/pytorch/examples/tree/master/imagenet) and [PytorchInsight](https://github.com/implus/PytorchInsight). 
 
+Many thanks to [Xiang Li](http://implus.github.io/) for his great work. 
