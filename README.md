@@ -96,6 +96,12 @@ Please follow the same coding style in [models/resnet.py](https://github.com/139
 1. Add a new model file in folder [models](https://github.com/13952522076/Efficient_ImageNet_Classification/tree/master/models)
 2. Import the model file in model package, say [models/__init__.py](https://github.com/13952522076/Efficient_ImageNet_Classification/blob/master/models/__init__.py)
 
+## Calculate Parameters and FLOPs
+```Bash
+python3 count_Param.py
+```
+:bug:: It would not consider the forward operations. For example, defining a pooling layer in init function and implementing the pooling operation in forward function will lead to different results.  
+
 ## Acknowledgements
 This implementation is built upon [PyTorch ImageNet demo](https://github.com/pytorch/examples/tree/master/imagenet) and [PytorchInsight](https://github.com/implus/PytorchInsight). 
 
