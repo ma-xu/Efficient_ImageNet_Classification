@@ -7,7 +7,7 @@ Date: Aug/15/2019
 Email: xuma@my.unt.edu
 
 Useage:
-python3 -m torch.distributed.launch --nproc_per_node=8 main -a old_resnet50 --b 32
+python3 -m torch.distributed.launch --nproc_per_node=8 main -a old_resnet18 --b 64 --opt-level O0
 
 
 

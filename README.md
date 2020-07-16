@@ -60,8 +60,23 @@ For more details, please see [Apex](https://github.com/NVIDIA/apex) or [Apex Ful
 <!--ln -s PATH_TO_ImageNet imagenet-->
 <!--```-->
 
-## Training
+## Training & Testing
 We provide two training strategies: step_lr schedular and cosine_lr schedular in [main_step.py](https://github.com/13952522076/Efficient_ImageNet_Classification/blob/master/main_step.py) and [main_cosine.py](https://github.com/13952522076/Efficient_ImageNet_Classification/blob/master/main_cosine.py) respectively.
+
+The training models (last one and best one) and the log file  are saved in "checkpoints/imagenet/`model_name`" by default.
+***
+
+**For the step learning rate schedular, run follwing commands**
+```Bash
+# change the parameters accordingly if necessary
+# e.g, If you have 4 GPUs, set the nproc_per_node to 4. If you want to train with 32FP, remove ----fp16.
+python3 -m torch.distributed.launch --nproc_per_node=8 main -a old_resnet50 --fp16 --b 32
+```
+**For the cosine learning rate schedular, run follwing commands**
+```Bash
+# change the parameters accordingly if necessary
+python3 -m torch.distributed.launch --nproc_per_node=8 main -a old_resnet18 --b 64 --opt-level O0
+```
 
 
 

@@ -156,10 +156,7 @@ args = parser.parse_args()
 
 # checkpoint
 if args.checkpoint is None:
-    if args.fp16:
-        args.checkpoint='checkpoints/imagenet/'+args.arch+'_FP16'
-    else:
-        args.checkpoint = 'checkpoints/imagenet/' + args.arch + '_FP32'
+    args.checkpoint='checkpoints/imagenet/'+args.arch
 
 
 args.distributed = False
