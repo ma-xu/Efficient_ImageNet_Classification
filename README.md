@@ -70,15 +70,18 @@ The training models (last one and best one) and the log file  are saved in "chec
 ```Bash
 # change the parameters accordingly if necessary
 # e.g, If you have 4 GPUs, set the nproc_per_node to 4. If you want to train with 32FP, remove ----fp16.
-python3 -m torch.distributed.launch --nproc_per_node=8 main -a old_resnet50 --fp16 --b 32
+python3 -m torch.distributed.launch --nproc_per_node=8 main_step.py -a old_resnet50 --fp16 --b 32
 ```
 **For the cosine learning rate schedular, run follwing commands**
 ```Bash
 # change the parameters accordingly if necessary
-python3 -m torch.distributed.launch --nproc_per_node=8 main -a old_resnet18 --b 64 --opt-level O0
+python3 -m torch.distributed.launch --nproc_per_node=8 main_cosine.py -a old_resnet18 --b 64 --opt-level O0
 ```
+## Add New Models
+Please follow the same coding style in [models/resnet.py](https://github.com/13952522076/Efficient_ImageNet_Classification/blob/master/models/resnet.py). 
 
-
+1. Add a new model file in folder [models](https://github.com/13952522076/Efficient_ImageNet_Classification/tree/master/models)
+2. Import the model file in model package, say [models/__init__.py](https://github.com/13952522076/Efficient_ImageNet_Classification/blob/master/models/__init__.py)
 
 ## Acknowledgements
 
