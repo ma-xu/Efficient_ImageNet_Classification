@@ -6,6 +6,12 @@ This repo provides an efficient implementation of ImageNet classification, based
 
 If any questions, please create an issue or contact [me](https://13952522076.github.io/) at <xuma@my.unt.edu>
 
+## Features
+- Accelerate the pre-processing of the input data with DALI
+- Half/Mix precision training with Apex
+- Real-time logger
+- Extremely simple structure
+
 ## Getting Start
 ### Installation
 
@@ -91,6 +97,6 @@ Please follow the same coding style in [models/resnet.py](https://github.com/139
 2. Import the model file in model package, say [models/__init__.py](https://github.com/13952522076/Efficient_ImageNet_Classification/blob/master/models/__init__.py)
 
 ## Acknowledgements
-This implementation is built upon [ImageNet demo](https://github.com/pytorch/examples/tree/master/imagenet) and [PytorchInsight](https://github.com/implus/PytorchInsight). 
+This implementation is built upon [PyTorch ImageNet demo](https://github.com/pytorch/examples/tree/master/imagenet) and [PytorchInsight](https://github.com/implus/PytorchInsight). 
 
 Many thanks to [Xiang Li](http://implus.github.io/) for his great work. 
