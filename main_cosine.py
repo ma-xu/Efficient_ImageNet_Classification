@@ -583,11 +583,4 @@ def set_optimizer(model):
 
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as e:
-        print(e)
-        traceback.print_exc()
-        os.system("sudo poweroff")
-    print("DONE, FINISHED!!!")
-    os.system("sudo poweroff")
+    main()
