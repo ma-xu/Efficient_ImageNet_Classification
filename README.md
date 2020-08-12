@@ -37,10 +37,10 @@ DALI Installation:
 ```Bash
 cd ~
 # For CUDA10
-pip install --extra-index-url https://developer.download.nvidia.com/compute/redist nvidia-dali-tf-plugin-cuda100
+pip install --extra-index-url https://developer.download.nvidia.com/compute/redist nvidia-dali-cuda100
 # or
 # For CUDA11
-pip install --extra-index-url https://developer.download.nvidia.com/compute/redist nvidia-dali-tf-plugin-cuda110
+pip install --extra-index-url https://developer.download.nvidia.com/compute/redist nvidia-dali-cuda110
 ```
 For more details, please see [Nvidia DALI installation](https://docs.nvidia.com/deeplearning/dali/user-guide/docs/installation.html).
 
