@@ -5,7 +5,7 @@ from .logger import *
 from .visualize import *
 from .eval import *
 from .flops_counter import *
-from .grad_cam import BackPropagation, Deconvnet, GradCAM,GuidedBackPropagation,occlusion_sensitivity
+from .grad_cam import *
 
 # progress bar
 import os, sys
